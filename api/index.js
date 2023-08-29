@@ -82,9 +82,7 @@ app.post("/api/register", async (req, res) => {
     res.status(422).json(e);
   }
 });
-// admin
-// nNN0e9GcNBxLMEsd
-// mongodb+srv://admin:nNN0e9GcNBxLMEsd@cluster0.qhlokzi.mongodb.net/?retryWrites=true&w=majority
+
 app.post("/api/login", async (req, res) => {
   mongoose.connect(process.env.MONGO_URL);
   const { email, password } = req.body;
